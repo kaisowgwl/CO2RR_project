@@ -1,5 +1,5 @@
 import { Layers, Check, Zap, Atom, Droplet, Info } from 'lucide-react';
-import { useState } from 'react';
+
 
 const SolutionImpactSection = () => {
   return (
