@@ -1,0 +1,68 @@
+**Project Context for Presentation Development**
+
+**Title:** Architectural Optimization of PEM Electrolyzer Catalyst Layers for Iridium Reduction
+
+---
+
+**1. Project Goals:**
+
+* **Reduce Iridium (Ir) usage by 90%** through novel catalyst layer architecture while maintaining or improving current density performance.
+* **Develop a monolithic Ti-Ir architecture** using 3D printing and electrochemical deposition techniques.
+* **Create digital twins of catalyst layers** to simulate and predict performance.
+* **Implement AI-driven optimization** to iterate on structure-performance relationships.
+* **Achieve high catalyst connectivity, mass activity, and ionic conductivity** with low contact resistance.
+
+---
+
+**2. Detailed Description:**
+
+The project proposes an architectural approach to PEM electrolyzer anode design, moving beyond conventional composition-based strategies. It introduces a digitally guided design-to-fabrication loop enabled by computational modeling and machine learning.
+
+**Workflow:**
+
+* **Digital Twin Generation**: Start with stochastic methods to recreate 3D microstructures representative of real catalyst layers.
+* **Performance Prediction**: Use COMSOL-based simulations to analyze electrochemical and transport behavior of these structures.
+* **AI-Driven Optimization**: Apply algorithms to modify microstructures, assess performance, and evolve towards optimal designs.
+* **Fabrication**: Translate optimized structures to reality using 3D printing of titanium supports.
+* **Deposition**: Coat supports with thin Ir layers through electrochemical methods.
+
+This closed-loop framework ensures rapid development of functional catalyst layers with reduced Ir content, improved utilization, and enhanced durability.
+
+---
+
+**3. Researcher Profile (Gabriel Wosiak Leite):**
+
+* PhD in Physical Chemistry with strong emphasis on energy transition, green hydrogen, electrochemistry, multiphysical simulation and microstructural modeling.
+* 1-year internship at **NREL**, sponsored by **Nel Hydrogen**, focused on multiphysics simulation and digital twin generation of PEM catalyst layers.
+* Lead author of multiple high-impact publications on CFD simulation, interfacial pH analysis, and electrochemical structure optimization.
+* Experienced in COMSOL, MATLAB, Python, and GAN-based digital structure generation and experimental electrochemistry.
+* Invited speaker at CINE Conference; awarded for best presentation and scientific visibility.
+
+---
+
+**4. NREL Expectations and Alignment:**
+
+The **Director's Fellowship** at NREL seeks postdoctoral researchers capable of proposing bold, independent research that aligns with NREL's mission to advance clean energy technologies. NREL emphasizes:
+
+* High scientific impact
+* Cross-disciplinary innovation
+* Technology transfer potential
+* Data-driven solutions to energy problems
+
+This project aligns closely with these expectations by:
+
+* Leveraging NREL's expertise in electrochemical systems and advanced manufacturing
+* Applying digital methods to reduce critical material dependency (Iridium)
+* Delivering transferrable digital tools and experimental methodologies
+
+---
+
+**5. Deliverables and Impact:**
+
+* **Performance gains:** ≥1.5 A/cm² at <1.8 V
+* **Volume reduction:** Catalyst layer <3 µm thick
+* **Ir Mass Activity:** Targeting 0.1 A/mg
+* **IP and Publications:** At least 1 provisional patent, 2+ peer-reviewed papers
+* **Transferable Framework:** Modular simulation-optimization platform for other catalytic systems
+
+This project provides a realistic, high-impact pathway to advance hydrogen production technologies and support global decarbonization goals.
