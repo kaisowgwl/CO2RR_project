@@ -79,7 +79,7 @@ const ExpectedOutcomesSection = () => {
                     const value = context.raw;
                     const metric = context.label;
                     // Reference values and sources for tooltip
-                    const realValues = {
+                    const realValues: Record<string, { [key: string]: string }> = {
                       'Ir Loading (mg/cm²)': {
                         'State-of-the-Art': '0.2 mg/cm²',
                         'Project Target': '0.05 mg/cm²',
