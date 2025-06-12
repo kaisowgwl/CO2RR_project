@@ -103,7 +103,9 @@ const ResourcesCollaborationSection = () => {
                     <p className="text-gray-600">Deposition and characterization</p>
                   </div>
                 </div>
-                <p className="pl-4 border-l-4 border-blue-200">Electrochemical lab facilities for Ir deposition and comprehensive characterization (SEM, EIS, CV)</p>
+                <p className="pl-4 border-l-4 border-blue-200">
+                  <a href="https://www.nrel.gov/esif" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900 font-semibold">ESIF</a> electrochemical lab facilities for Ir deposition and comprehensive characterization (SEM, EIS, CV)
+                </p>
               </div>
               
               <div className="bg-white rounded-lg shadow-md p-6">
@@ -117,8 +119,8 @@ const ResourcesCollaborationSection = () => {
                   </div>
                 </div>
                 <p className="pl-4 border-l-4 border-blue-200">
-                  Access to machine learning and simulation clusters for digital twin development and optimization.<br />
-                  <span className="font-bold text-blue-700">Best scenario:</span> NREL HPC access with COMSOL Multiphysics licenses for large-scale, high-fidelity simulations to achieve optimal catalyst structures.
+                  <a href="https://www.nrel.gov/hpc" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900 font-semibold">NREL HPC</a> resources for digital twin development, machine learning, and high-fidelity simulation.<br />
+                  <span className="font-bold text-blue-700">Best scenario:</span> Access with COMSOL Multiphysics licenses for large-scale, high-fidelity simulations to achieve optimal catalyst structures.
                 </p>
               </div>
             </div>
@@ -128,21 +130,47 @@ const ResourcesCollaborationSection = () => {
             <h3 className="font-semibold text-xl mb-6">Collaboration Network</h3>
             
 
-            <div className="bg-white rounded-lg shadow-md p-6 mb-6 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg">
-              <h4 className="font-semibold text-lg mb-3">NREL Mentorship</h4>
+
+
+
+            {/* Jacob Wrubel - Main Mentor */}
+            <div className="bg-white rounded-lg shadow-md p-6 mb-4 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg">
+              <h4 className="font-semibold text-lg mb-3">Main Mentor</h4>
               <div className="flex items-start">
                 <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                   <UserRound className="text-blue-600 w-5 h-5" />
                 </div>
                 <div>
-                  <p className="mb-2">
-                    Primary mentor collaboration with <a href="https://research-hub.nrel.gov/en/persons/jacob-wrubel" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900">Dr. Jacob Wrubel</a> and guidance from NREL's hydrogen and catalyst teams.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Technical Guidance</span>
-                    <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Project Oversight</span>
-                    <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Career Development</span>
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    <a href="https://research-hub.nrel.gov/en/persons/jacob-wrubel" target="_blank" rel="noopener noreferrer" className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-blue-100">Dr. Jacob Wrubel</a>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Electrocatalysis</span>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">CO₂ Electrolysis</span>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Simulation</span>
                   </div>
+                  <p className="text-gray-700 text-xs mb-1">
+                    NREL scientist, main mentor, and co-mentor during my 1-year PhD internship. Expert in electrocatalysis, CO₂ electrolysis, and simulation for clean energy.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Guido Bender - Project Collaboration */}
+            <div className="bg-white rounded-lg shadow-md p-6 mb-4 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg">
+              <h4 className="font-semibold text-lg mb-3">Collaboration</h4>
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                  <UserRound className="text-blue-600 w-5 h-5" />
+                </div>
+                <div>
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    <a href="https://research-hub.nrel.gov/en/persons/guido-bender" target="_blank" rel="noopener noreferrer" className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-blue-100">Dr. Guido Bender</a>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Electrochemical Engineering</span>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Cell Performance</span>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Device Scale-Up</span>
+                  </div>
+                  <p className="text-gray-700 text-xs mb-1">
+                    NREL scientist and mentor during my 1-year PhD internship. Focus on electrochemical engineering, system modeling, and scale-up.
+                  </p>
                 </div>
               </div>
             </div>
@@ -154,15 +182,15 @@ const ResourcesCollaborationSection = () => {
                   <UserRound className="text-blue-600 w-5 h-5" />
                 </div>
                 <div>
-                  <p className="mb-2">
-                    Collaboration with <a href="https://research-hub.nrel.gov/en/persons/francois-usseglio-viretta" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900">Dr. François Usseglio-Viretta</a>, intern researcher and developer of <a href="https://www.nrel.gov/transportation/matbox" target="_blank" rel="noopener noreferrer" className="text-blue-700 underline hover:text-blue-900">MATBOX</a> at NREL, leveraging his expertise in digital materials, micro-architecture, and integrated computational pipelines for advanced digital twin and modeling capabilities.
-                  </p>
-                  <div className="flex flex-wrap gap-2 mt-2">
-                    <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">MATBOX Expertise</span>
-                    <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Digital Materials & Micro-Architecture</span>
-                    <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Integrated Pipelines</span>
-                    <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm">Digital Twin Modeling</span>
+                  <div className="flex flex-wrap gap-2 mb-2">
+                    <a href="https://research-hub.nrel.gov/en/persons/francois-usseglio-viretta" target="_blank" rel="noopener noreferrer" className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-blue-100">Dr. François Usseglio-Viretta</a>
+                    <a href="https://www.nrel.gov/transportation/matbox" target="_blank" rel="noopener noreferrer" className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-blue-100">MATBOX</a>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Digital Materials</span>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Micro-Architecture</span>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Integrated Pipelines</span>
+                    <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Digital Twin Modeling</span>
                   </div>
+                  <p className="text-gray-700 text-sm mb-1">Intern researcher, developer of MATBOX at NREL. Expert in creating digital materials, micro-architectures, and integrated computational pipelines for advanced digital twin modeling.</p>
                 </div>
               </div>
             </div>

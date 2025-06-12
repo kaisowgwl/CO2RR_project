@@ -1,8 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-// import App from './App.tsx'
-// import SlideDeck from "./components/SlideDeck";
 import MotivationSection from "./components/MotivationSection";
 import SolutionImpactSection from "./components/SolutionImpactSection";
 import ObjectivesSection from "./components/ObjectivesSection";
