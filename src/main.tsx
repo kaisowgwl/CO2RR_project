@@ -9,6 +9,9 @@ import ObjectivesSection from "./components/ObjectivesSection";
 import ResourcesCollaborationSection from "./components/ResourcesCollaborationSection";
 import ExpectedOutcomesSection from "./components/ExpectedOutcomesSection";
 import AlignmentMissionSection from "./components/AlignmentMissionSection";
+import ExecutiveSummarySection from "./components/ExecutiveSummarySection";
+import NoveltyInnovationSection from "./components/NoveltyInnovationSection";
+import MethodologyTimelineSection from "./components/MethodologyTimelineSection";
 import SlideNavButtons from "./components/SlideNavButtons";
 import { useState, useRef } from "react";
 
@@ -79,6 +82,9 @@ createRoot(document.getElementById('root')!).render(
     <SlideDeckWithTopNav
       slides={[
         <TitleSlide key="title" />,
+        <ExecutiveSummarySection key="executive-summary" />,
+        <NoveltyInnovationSection key="novelty-innovation" />,
+        <MethodologyTimelineSection key="methodology-timeline" />,
         <MotivationSection key="motivation" />,
         <SolutionImpactSection key="solution" />,
         <ObjectivesSection key="objectives" />,
