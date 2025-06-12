@@ -91,10 +91,13 @@ const AlignmentMissionSection = () => {
                   <Gem className="text-blue-600 w-6 h-6 mr-3" />
                   <h4 className="font-semibold text-lg">Revolutionizing Electrochemical Manufacturing</h4>
                 </div>
-                <ul className="list-disc pl-8 text-gray-700 mt-2">
-                  <li>Digital, AI-driven catalyst layer design for <span className="font-bold">unprecedented efficiency and material savings</span></li>
-                  <li><span className="font-bold">Broadly transferable</span> to PEM electrolyzers, batteries, fuel cells, CO<sub>2</sub> reduction, methane reforming, and more</li>
-                </ul>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Universal Method</span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Scalable to Any Device</span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">AI-Driven Materials Design</span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">High-End Architected Materials</span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Efficiency & Material Savings</span>
+                </div>
               </li>
               <li className="bg-white rounded-lg shadow-md p-6">
                 <div className="flex items-center mb-2">
@@ -148,19 +151,24 @@ const AlignmentMissionSection = () => {
                   <Recycle className="text-green-600 mr-2 w-5 h-5" />
                   <h4 className="font-semibold">Sustainability</h4>
                 </div>
-                <ul className="list-disc pl-8 text-gray-700 mt-1">
-                  <li>Reduces material intensity and waste</li>
-                  <li>Mitigates critical supply risk</li>
-                </ul>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Critical Material Reduction</span>
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Circular Manufacturing</span>
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Supply Chain Security</span>
+                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">Unique Digital-Physical Integration</span>
+                </div>
               </li>
               <li className="bg-white rounded-lg shadow-md p-4 transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg">
                 <div className="flex items-center mb-2">
                   <Zap className="text-green-600 mr-2 w-5 h-5" />
-                  <h4 className="font-semibold">Energy Efficiency</h4>
+                  <h4 className="font-semibold">Next-Generation Energy Efficiency</h4>
                 </div>
-                <ul className="list-disc pl-8 text-gray-700 mt-1">
-                  <li>Maximizes device efficiency for both renewable and non-renewable feedstocks</li>
-                </ul>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">AI-Architected Devices</span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Real-Time Optimization</span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">Breakthrough Efficiency</span>
+                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs">U.S. Leadership</span>
+                </div>
               </li>
             </ul>
             
