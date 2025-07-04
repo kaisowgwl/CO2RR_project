@@ -83,7 +83,7 @@ const ResearcherBackgroundSection = () => {
                     title="View publication: Langmuir 2021, 37, 45, 13413–13425"
                   >
                     <img
-                      src="/langd5.2021.37.issue-45.largecover.jpg"
+                      src="/assets/langd5.2021.37.issue-45.largecover.jpg"
                       alt="Langmuir 2021 Cover: Simulation of Colloidal Particles"
                       className="rounded-md shadow-md w-32 h-40 object-cover border-2 border-blue-200 group-hover:border-blue-500 transition duration-200"
                     />
@@ -97,7 +97,7 @@ const ResearcherBackgroundSection = () => {
                     title="View publication: ChemElectroChem 2020, 7, 18, 3742–3752"
                   >
                     <img
-                      src="/celc202001242-toc-0001-m.jpg"
+                      src="/assets/celc202001242-toc-0001-m.jpg"
                       alt="ChemElectroChem 2020 Cover: Simulation in Spectroelectrochemical Cell"
                       className="rounded-md shadow-md w-32 h-40 object-cover border-2 border-blue-200 group-hover:border-blue-500 transition duration-200"
                     />
