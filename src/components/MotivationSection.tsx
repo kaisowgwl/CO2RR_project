@@ -1,4 +1,4 @@
-import { AlertTriangle, Zap, X, Info } from 'lucide-react';
+import { AlertTriangle, Zap, Info } from 'lucide-react';
 import { useEffect, useRef } from 'react';
 import { Chart } from 'chart.js/auto';
 

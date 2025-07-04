@@ -1,4 +1,4 @@
-import { Brain, Printer, Beaker, Settings2, Lightbulb, User } from 'lucide-react';
+import { Brain, Printer, Beaker, Settings2, Lightbulb } from 'lucide-react';
 
 const ExecutiveSummarySection = () => {
   return (

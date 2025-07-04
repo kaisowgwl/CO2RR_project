@@ -1,4 +1,4 @@
-import { Beaker, Printer, Settings2, User, Computer, BarChart2, Users } from 'lucide-react';
+import { Settings2, Computer, BarChart2, Users } from 'lucide-react';
 
 const ResearcherBackgroundSection = () => {
   return (
