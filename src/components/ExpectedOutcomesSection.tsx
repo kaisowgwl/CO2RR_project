@@ -18,18 +18,17 @@ const ExpectedOutcomesSection = () => {
           type: 'radar',
           data: {
             labels: [
-              'Ir Loading (mg/cm²)',
               'Current Density (A/cm²)',
-              'Durability (h @ 1 A/cm²)',
-              'Connectivity Index',
-              'Mass Activity (A/mg Ir)',
-              'Ionic Conductivity (S/cm)'
+              'FE_CO (%)',
+              'Durability (h)',
+              'Ionic Conductivity (S/cm)',
+              'Noble Metal Loading (mg/cm²)',
+              'Catalyst Layer Thickness (µm)'
             ],
             datasets: [
               {
                 label: 'State-of-the-Art',
-                // Example: 0.2 mg/cm², 2 A/cm², 300 h, 60, 0.1 A/mg, 0.05 S/cm
-                data: [20, 60, 60, 60, 10, 50],
+                data: [67, 90, 67, 50, 50, 67], // 67% for 0.2/0.3, 90% for FE, 67% for 2000/3000, etc.
                 backgroundColor: 'rgba(255, 99, 132, 0.2)',
                 borderColor: 'rgba(255, 99, 132, 1)',
                 pointBackgroundColor: 'rgba(255, 99, 132, 1)',
@@ -39,8 +38,7 @@ const ExpectedOutcomesSection = () => {
               },
               {
                 label: 'Project Target',
-                // Example: 0.05 mg/cm², 3 A/cm², 500 h, 90, 0.15 A/mg, 0.09 S/cm
-                data: [90, 90, 90, 90, 90, 90],
+                data: [100, 95, 100, 100, 100, 100],
                 backgroundColor: 'rgba(54, 162, 235, 0.2)',
                 borderColor: 'rgba(54, 162, 235, 1)',
                 pointBackgroundColor: 'rgba(54, 162, 235, 1)',
@@ -60,12 +58,12 @@ const ExpectedOutcomesSection = () => {
                 suggestedMax: 100,
                 pointLabels: {
                   callback: function(label: string) {
-                    // Shorten labels for clarity
                     return label.replace(' (mg/cm²)', '')
                                 .replace(' (A/cm²)', '')
-                                .replace(' (h @ 1 A/cm²)', '')
-                                .replace(' (A/mg Ir)', '')
-                                .replace(' (S/cm)', '');
+                                .replace(' (h)', '')
+                                .replace(' (%)', '')
+                                .replace(' (S/cm)', '')
+                                .replace(' (µm)', '');
                   }
                 }
               }
@@ -78,37 +76,36 @@ const ExpectedOutcomesSection = () => {
                     const label = context.dataset.label || '';
                     const value = context.raw;
                     const metric = context.label;
-                    // Reference values and sources for tooltip
                     const realValues: Record<string, { [key: string]: string }> = {
-                      'Ir Loading (mg/cm²)': {
-                        'State-of-the-Art': '0.2 mg/cm²',
-                        'Project Target': '0.05 mg/cm²',
-                        'ref': 'Nature Energy 7, 140–147 (2022); Joule 7, 1–17 (2023)'
-                      },
                       'Current Density (A/cm²)': {
-                        'State-of-the-Art': '2',
-                        'Project Target': '3',
-                        'ref': 'J. Power Sources 484, 229321 (2021); IEA Global Hydrogen Review 2022'
+                        'State-of-the-Art': '0.2 (200 mA/cm²)',
+                        'Project Target': '0.3 (300 mA/cm²)',
+                        'ref': 'https://www.mdpi.com/2227-9717/10/5/826'
                       },
-                      'Durability (h @ 1 A/cm²)': {
-                        'State-of-the-Art': '300',
-                        'Project Target': '500',
-                        'ref': 'JES 169, 2022'
+                      'FE_CO (%)': {
+                        'State-of-the-Art': '90',
+                        'Project Target': '≥95',
+                        'ref': 'https://www.nature.com/articles/s41598-021-90581-0'
                       },
-                      'Connectivity Index': {
-                        'State-of-the-Art': '60',
-                        'Project Target': '90',
-                        'ref': 'Simulation/Modeling Target'
-                      },
-                      'Mass Activity (A/mg Ir)': {
-                        'State-of-the-Art': '0.1',
-                        'Project Target': '0.15',
-                        'ref': 'ACS Catalysis 13, 2023'
+                      'Durability (h)': {
+                        'State-of-the-Art': '2000',
+                        'Project Target': '3000',
+                        'ref': 'https://wang.rice.edu/files/2025/06/science.adr3834.pdf'
                       },
                       'Ionic Conductivity (S/cm)': {
                         'State-of-the-Art': '0.05',
-                        'Project Target': '0.09',
-                        'ref': 'JES 169, 2022'
+                        'Project Target': '0.10',
+                        'ref': 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10811620/'
+                      },
+                      'Noble Metal Loading (mg/cm²)': {
+                        'State-of-the-Art': '0.5',
+                        'Project Target': '0.25',
+                        'ref': 'https://www.nature.com/articles/s41598-021-90581-0'
+                      },
+                      'Catalyst Layer Thickness (µm)': {
+                        'State-of-the-Art': '3',
+                        'Project Target': '2',
+                        'ref': 'https://www.nature.com/articles/s41598-021-90581-0'
                       }
                     };
                     const ref = realValues[metric]?.ref ? `\nRef: ${realValues[metric].ref}` : '';
@@ -117,8 +114,8 @@ const ExpectedOutcomesSection = () => {
                 }
               }
             }
-          } // <-- FIX: closes the Chart options object
-        }); // <-- FIX: closes the Chart constructor
+          }
+        });
       }
     }
 
@@ -132,108 +129,102 @@ const ExpectedOutcomesSection = () => {
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-[#f5f7fa] to-[#e4e8ed] p-8 md:p-16 text-gray-800">
       <div className="absolute w-3 md:h-4/5 bg-gradient-to-b from-[#0072c6] to-[#00a2ff] left-0 top-[10%] rounded-r-md"></div>
-
       <div className="relative z-10 ml-4 md:ml-8">
         <h1 className="font-bold text-3xl md:text-4xl mb-8 text-[#0072c6]">Expected Outcomes & Metrics</h1>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+          {/* Left: Radar chart and performance table */}
           <div>
-            <h3 className="font-semibold text-xl mb-6">Performance Targets</h3>
-            <div className="space-y-6">
-              <div className="bg-blue-50/30 border-l-4 border-[#0072c6] rounded-lg p-5">
-                <div className="flex justify-between items-center mb-2">
-                  <h4 className="font-semibold">Ionic Conductivity</h4>
-                  <span className="text-blue-600 font-bold">0.09 S/cm</span>
-                </div>
-                <p className="text-sm mb-1">Improved via architecture-driven hydration and ionomer distribution</p>
-                <div className="text-xs text-gray-500 mb-2">Ref: JES 169, 2022</div>
-                <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-[#0072c6] to-[#00a2ff] rounded-full" style={{width: '90%'}}></div>
-                </div>
+            <h3 className="font-semibold text-xl mb-6">Performance Comparison</h3>
+            <div className="bg-white p-6 rounded-lg shadow mb-6">
+              <div className="h-[250px] mb-4">
+                <canvas ref={chartRef}></canvas>
               </div>
-              <div className="bg-blue-50/30 border-l-4 border-[#0072c6] rounded-lg p-5">
-                <div className="flex justify-between items-center mb-2">
-                  <h4 className="font-semibold">Iridium Loading Reduction</h4>
-                  <span className="text-blue-600 font-bold">75%</span>
-                </div>
-                <p className="text-sm mb-1">Compared to conventional CCM-based PEM electrolyzers</p>
-                <div className="text-xs text-gray-500 mb-2">Ref: Nature Energy 7, 140–147 (2022); Joule 7, 1–17 (2023)</div>
-                <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-[#0072c6] to-[#00a2ff] rounded-full" style={{width: '75%'}}></div>
-                </div>
-              </div>
-              <div className="bg-blue-50/30 border-l-4 border-[#0072c6] rounded-lg p-5">
-                <div className="flex justify-between items-center mb-2">
-                  <h4 className="font-semibold">Contact Resistance</h4>
-                  <span className="text-blue-600 font-bold">&lt;10 mΩ·cm²</span>
-                </div>
-                <p className="text-sm mb-1">Due to monolithic Ti–Ir interface</p>
-                <div className="text-xs text-gray-500 mb-2">Ref: J. Power Sources 484, 229321 (2021)</div>
-                <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-[#0072c6] to-[#00a2ff] rounded-full" style={{width: '85%'}}></div>
-                </div>
-              </div>
-              <div className="bg-blue-50/30 border-l-4 border-[#0072c6] rounded-lg p-5">
-                <div className="flex justify-between items-center mb-2">
-                  <h4 className="font-semibold">Ir Mass Activity</h4>
-                  <span className="text-blue-600 font-bold">8 A/mg</span>
-                </div>
-                <p className="text-sm mb-1">Achieved through optimized surface area and structure</p>
-                <div className="text-xs text-gray-500 mb-2">Ref: ACS Catalysis 13, 2023</div>
-                <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-[#0072c6] to-[#00a2ff] rounded-full" style={{width: '80%'}}></div>
-                </div>
-              </div>
-              <div className="bg-blue-50/30 border-l-4 border-[#0072c6] rounded-lg p-5">
-                <div className="flex justify-between items-center mb-2">
-                  <h4 className="font-semibold">Catalyst Layer Thickness</h4>
-                  <span className="text-blue-600 font-bold">&lt;3 μm</span>
-                </div>
-                <p className="text-sm mb-1">With hierarchical porosity for optimal mass transport</p>
-                <div className="text-xs text-gray-500 mb-2">Ref: JES 169, 2022</div>
-                <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-[#0072c6] to-[#00a2ff] rounded-full" style={{width: '75%'}}></div>
-                </div>
-              </div>
+              <table className="w-full text-xs text-left border-t border-b border-gray-200">
+                <thead>
+                  <tr className="text-gray-700">
+                    <th className="py-1 pr-2 font-semibold">Metric</th>
+                    <th className="py-1 px-2 font-semibold">State-of-the-Art</th>
+                    <th className="py-1 px-2 font-semibold">Project Target</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td className="py-1 pr-2">Current Density (A/cm²)</td>
+                    <td className="py-1 px-2">
+                      <a className="text-blue-600 underline" href="https://www.mdpi.com/2227-9717/10/5/826" target="_blank" rel="noopener noreferrer">~0.2 (200 mA)</a>
+                    </td>
+                    <td className="py-1 px-2">0.3 (300 mA)</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 pr-2">FE_CO (%)</td>
+                    <td className="py-1 px-2">
+                      <a className="text-blue-600 underline" href="https://www.nature.com/articles/s41598-021-90581-0" target="_blank" rel="noopener noreferrer">90</a>
+                    </td>
+                    <td className="py-1 px-2">≥95</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 pr-2">Durability (h)</td>
+                    <td className="py-1 px-2">
+                      <a className="text-blue-600 underline" href="https://wang.rice.edu/files/2025/06/science.adr3834.pdf" target="_blank" rel="noopener noreferrer">2000</a>
+                    </td>
+                    <td className="py-1 px-2">3000</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 pr-2">Ionic Conductivity (S/cm)</td>
+                    <td className="py-1 px-2">
+                      <a className="text-blue-600 underline" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10811620/" target="_blank" rel="noopener noreferrer">0.05</a>
+                    </td>
+                    <td className="py-1 px-2">0.10</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 pr-2">Noble Metal Loading (mg/cm²)</td>
+                    <td className="py-1 px-2">
+                      <a className="text-blue-600 underline" href="https://www.nature.com/articles/s41598-021-90581-0" target="_blank" rel="noopener noreferrer">0.5</a>
+                    </td>
+                    <td className="py-1 px-2">0.25</td>
+                  </tr>
+                  <tr>
+                    <td className="py-1 pr-2">Catalyst Layer Thickness (µm)</td>
+                    <td className="py-1 px-2">
+                      <a className="text-blue-600 underline" href="https://www.nature.com/articles/s41598-021-90581-0" target="_blank" rel="noopener noreferrer">3</a>
+                    </td>
+                    <td className="py-1 px-2">2</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
-
+          {/* Right: Deliverables */}
           <div>
             <h3 className="font-semibold text-xl mb-6">Deliverables</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div className="space-y-4">
               <div className="bg-white rounded-lg shadow-md p-5">
-                <div className="flex items-center mb-3">
+                <div className="flex items-center mb-2">
                   <LineChart className="text-blue-600 w-5 h-5 mr-3" />
-                  <h4 className="font-semibold">Digital Model</h4>
+                  <h4 className="font-semibold">Digital-to-Physical Model</h4>
                 </div>
-                <p className="text-sm">Structure-performance correlation model with predictive capability for scale-up</p>
+                <p className="text-sm">Digital-to-physical model linking microstructure to performance metrics.</p>
               </div>
               <div className="bg-white rounded-lg shadow-md p-5">
-                <div className="flex items-center mb-3">
+                <div className="flex items-center mb-2">
                   <Layers className="text-blue-600 w-5 h-5 mr-3" />
-                  <h4 className="font-semibold">Prototype Anodes</h4>
+                  <h4 className="font-semibold">Prototype GDEs</h4>
                 </div>
-                <p className="text-sm">Fabricated and tested ≥1.5 A/cm² @ &lt;1.8 V</p>
+                <p className="text-sm">Prototype GDEs achieving ≥200 mA/cm², ≥90% CO FE, and &lt;0.5 mg/cm² Ag loading.</p>
               </div>
               <div className="bg-white rounded-lg shadow-md p-5">
-                <div className="flex items-center mb-3">
+                <div className="flex items-center mb-2">
                   <FileText className="text-blue-600 w-5 h-5 mr-3" />
-                  <h4 className="font-semibold">Publications</h4>
+                  <h4 className="font-semibold">Durability Data</h4>
                 </div>
-                <p className="text-sm">At least two peer-reviewed publications based on architectural design</p>
+                <p className="text-sm">Durability data demonstrating ≥1000 h stability at relevant conditions.</p>
               </div>
               <div className="bg-white rounded-lg shadow-md p-5">
-                <div className="flex items-center mb-3">
+                <div className="flex items-center mb-2">
                   <Lightbulb className="text-blue-600 w-5 h-5 mr-3" />
-                  <h4 className="font-semibold">Intellectual Property</h4>
+                  <h4 className="font-semibold">Publications + IP</h4>
                 </div>
-                <p className="text-sm">One provisional patent filing based on architectural design</p>
-              </div>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h4 className="font-semibold text-lg mb-4">Performance Comparison</h4>
-              <div className="h-[250px]">
-                <canvas ref={chartRef}></canvas>
+                <p className="text-sm">Publications + IP, sharing both design insights and practical electrode methodologies.</p>
               </div>
             </div>
           </div>

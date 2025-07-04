@@ -1,4 +1,6 @@
+
 import { Layers, Check, Zap, Atom, Droplet, Info } from 'lucide-react';
+import imageMethod from '../../image_method.png';
 
 
 const SolutionImpactSection = () => {
@@ -17,10 +19,10 @@ const SolutionImpactSection = () => {
                 <div className="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-green-100 mr-4">
                   <Layers className="text-green-600 w-5 h-5" />
                 </div>
-                <h3 className="font-semibold text-xl">Monolithic Ti-Ir Architecture</h3>
+                <h3 className="font-semibold text-xl">Architected CO₂RR Catalyst Layer</h3>
               </div>
               <p className="mb-3">
-                Our approach eliminates interfacial losses via a seamless, integrated structure, and uniquely leverages a digital design loop:
+                Our approach enables precise microstructural control to enhance triple-phase boundary (TPB) exposure, reduce local pH gradients, and maximize catalytic selectivity using a feedback-driven design loop:
               </p>
               <ul className="space-y-3 pl-5">
                 <li className="flex items-start">
@@ -32,7 +34,7 @@ const SolutionImpactSection = () => {
                 <li className="flex items-start">
                   <Check className="text-green-500 mt-1 mr-2 w-4 h-4" />
                   <span>
-                    <span className="font-bold">Machine learning optimization</span> uses simulation feedback to guide the design of titanium microstructures for maximum Ir utilization and conductivity.
+                    <span className="font-bold">Machine learning optimization</span> uses simulation feedback to guide the design of 3D microarchitectures for maximum noble metal utilization and selectivity.
                   </span>
                 </li>
                 <li className="flex items-start group relative">
@@ -41,27 +43,36 @@ const SolutionImpactSection = () => {
                     Printing conductive titanium microstructures directly onto the current collector, based on optimized digital designs.
                     <Info className="inline w-4 h-4 text-blue-400 cursor-pointer align-text-bottom ml-1" />
                   </span>
-                  <div className="absolute left-8 top-6 z-20 hidden group-hover:block bg-white border border-gray-300 rounded shadow-lg p-3 w-[320px] text-xs text-gray-700">
-                    <div className="font-semibold mb-1">Fabrication & Scaling References:</div>
-                    <ul className="list-disc pl-4">
+                  <div className="absolute left-6 top-0 z-20 hidden group-hover:block bg-white border border-gray-300 rounded shadow-lg p-4 w-[360px] text-xs text-gray-700">
+                    <div className="font-semibold mb-1">State-of-the-art references (CO₂RR):</div>
+                    <ul className="list-disc pl-4 mb-2 text-xs text-gray-700">
                       <li>
-                        <span className="font-bold">Resolution:</span> 20–50 μm features demonstrated for Ti by laser powder bed fusion and micro-SLA.<br />
-                        <span className="text-gray-500">e.g. Nature Communications 12, 1850 (2021); Additive Manufacturing 36, 101574 (2020)</span>
+                        <span className="font-bold">Ag/Cu loading:</span> 0.2–1.0 mg/cm²
+                        (<a href="https://doi.org/10.1021/acs.jpclett.4c02869" target="_blank" className="text-blue-600 underline">J. Phys. Chem. Lett. 2024</a>)
                       </li>
                       <li>
-                        <span className="font-bold">Scalable area:</span> Electrodes up to 10–25 cm² reported; wafer-scale (100 cm²+) possible with industrial systems.<br />
-                        <span className="text-gray-500">e.g. Advanced Engineering Materials 22, 2000272 (2020)</span>
+                        <span className="font-bold">Faradaic efficiency (CO):</span> 85–95%
+                        (<a href="https://doi.org/10.1021/acsenergylett.2c01555" target="_blank" className="text-blue-600 underline">ACS Energy Lett.</a>)
                       </li>
+                      <li>
+                        <span className="font-bold">Partial current density:</span> 100–300 mA/cm²
+                        (<a href="https://pubs.rsc.org/en/content/articlehtml/2023/sc/d3sc04353c" target="_blank" className="text-blue-600 underline">RSC Sustainability 2023</a>)
+                      </li>
+                      <li>
+                        <span className="font-bold">Layer thickness:</span> 1–3 μm
+                        (<a href="https://doi.org/10.1016/S1872-2067(20)63754-8" target="_blank" className="text-blue-600 underline">Chinese Journal of Catalysis 2021</a>)
+                      </li>
+                      <li className="mt-2 text-blue-700 font-semibold">Your Proposed Impact:</li>
+                      <li>↓ 50% Ag loading while maintaining 95%+ selectivity</li>
+                      <li>Optimized porosity and local pH via 3D-engineered catalyst supports</li>
+                      <li>Improved durability by minimizing carbonate accumulation and flooding</li>
                     </ul>
-                    <div className="mt-1 text-gray-500">
-                      See also: "Additive Manufacturing of Metallic Components for Electrochemical Devices", Joule 2022.
-                    </div>
                   </div>
                 </li>
                 <li className="flex items-start">
                   <Check className="text-green-500 mt-1 mr-2 w-4 h-4" />
                   <span>
-                    <span className="font-bold">Growing Iridium nanostructures in-situ on the Ti scaffold and integrating ionomer</span> via spray coating or infiltration, forming ultra-thin, high-activity, and proton-conductive catalyst layers.
+                    <span className="font-bold">Growing CO₂RR-active nanostructures in-situ on the scaffold and integrating ionomer</span> via spray coating or infiltration, forming ultra-thin, conductive, and CO₂-accessible layers.
                   </span>
                 </li>
               </ul>
@@ -72,54 +83,56 @@ const SolutionImpactSection = () => {
                 Expected Impact
                 <span className="ml-2 relative group">
                   <Info className="w-5 h-5 text-blue-500 cursor-pointer" />
-                  <div className="absolute left-6 top-0 z-20 hidden group-hover:block bg-white border border-gray-300 rounded shadow-lg p-4 w-[340px] text-xs text-gray-700">
-                    <div className="font-semibold mb-1">State-of-the-art references:</div>
-                    <ul className="list-disc pl-4 mb-2">
+                  <div className="absolute left-6 top-0 z-20 hidden group-hover:block bg-white border border-gray-300 rounded shadow-lg p-4 w-[360px] text-xs text-gray-700">
+                    <div className="font-semibold mb-1">State-of-the-art references (CO₂RR):</div>
+                    <ul className="list-disc pl-4 mb-2 text-xs text-gray-700">
                       <li>
-                        <span className="font-bold">Ir loading:</span> 0.2–0.3 mg/cm² (Nature Energy 2022, Joule 2023)
+                        <span className="font-bold">Ag/Cu loading:</span> 0.2–1.0 mg/cm²
+                        (<a href="https://doi.org/10.1021/acs.jpclett.4c02869" target="_blank" className="text-blue-600 underline">J. Phys. Chem. Lett. 2024</a>)
                       </li>
                       <li>
-                        <span className="font-bold">Contact resistance:</span> 5–20 mΩ·cm² (J. Power Sources 2021)
+                        <span className="font-bold">Faradaic efficiency (CO):</span> 85–95%
+                        (<a href="https://doi.org/10.1021/acsenergylett.2c01555" target="_blank" className="text-blue-600 underline">ACS Energy Lett.</a>)
                       </li>
                       <li>
-                        <span className="font-bold">Mass activity:</span> 0.05–0.15 A/mg Ir (ACS Catalysis 2023)
+                        <span className="font-bold">Partial current density:</span> 100–300 mA/cm²
+                        (<a href="https://pubs.rsc.org/en/content/articlehtml/2023/sc/d3sc04353c" target="_blank" className="text-blue-600 underline">RSC Sustainability 2023</a>)
                       </li>
                       <li>
-                        <span className="font-bold">Layer thickness:</span> 2–5 μm (JES 2022)
+                        <span className="font-bold">Layer thickness:</span> 1–3 μm
+                        (<a href="https://doi.org/10.1016/S1872-2067(20)63754-8" target="_blank" className="text-blue-600 underline">Chinese Journal of Catalysis 2021</a>)
                       </li>
+                      <li className="mt-2 text-blue-700 font-semibold">Your Proposed Impact:</li>
+                      <li>↓ 50% Ag loading while maintaining 95%+ selectivity</li>
+                      <li>Optimized porosity and local pH via 3D-engineered catalyst supports</li>
+                      <li>Improved durability by minimizing carbonate accumulation and flooding</li>
                     </ul>
-                    <div className="mb-1">
-                      <span className="font-bold">Note:</span> Durability (&gt;1000 h) and scalability to large-area cells remain key challenges for all low-Ir approaches.
-                    </div>
-                    <div className="text-gray-500">
-                      See also: IEA Global Hydrogen Review 2022
-                    </div>
                   </div>
                 </span>
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="bg-white p-4 rounded-lg">
                   <div className="text-center">
-                    <span className="text-3xl font-bold text-blue-600">90%</span>
-                    <p className="text-sm mt-1">Reduction in Ir loading</p>
+                    <span className="text-3xl font-bold text-blue-600">↓50%</span>
+                    <p className="text-sm mt-1">Noble metal usage</p>
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
                   <div className="text-center">
-                    <span className="text-3xl font-bold text-blue-600">&lt;10</span>
-                    <p className="text-sm mt-1">mΩ·cm² contact resistance</p>
+                    <span className="text-3xl font-bold text-blue-600">&gt;95%</span>
+                    <p className="text-sm mt-1">CO selectivity at high rate</p>
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
                   <div className="text-center">
-                    <span className="text-3xl font-bold text-blue-600">0.1</span>
-                    <p className="text-sm mt-1">A/mg Ir mass activity</p>
+                    <span className="text-3xl font-bold text-blue-600">300+</span>
+                    <p className="text-sm mt-1">mA/cm² at 0.5 mg/cm² Ag</p>
                   </div>
                 </div>
                 <div className="bg-white p-4 rounded-lg">
                   <div className="text-center">
-                    <span className="text-3xl font-bold text-blue-600">&lt;3</span>
-                    <p className="text-sm mt-1">μm catalyst layer thickness</p>
+                    <span className="text-3xl font-bold text-blue-600">&lt;2</span>
+                    <p className="text-sm mt-1">μm engineered layer</p>
                   </div>
                 </div>
               </div>
@@ -128,42 +141,12 @@ const SolutionImpactSection = () => {
           
           <div>
             <div className="bg-white rounded-lg shadow-md p-6 mb-6 flex justify-center items-center">
-              <svg width="500" height="300" viewBox="0 0 500 300">
-                {/* Current Collector Base */}
-                <rect x="50" y="220" width="400" height="30" fill="#B0BEC5" stroke="#78909C" strokeWidth="2"/>
-                <text x="250" y="240" textAnchor="middle" fill="#37474F" fontSize="14">Titanium Current Collector</text>
-                
-                {/* Traditional vs New Architecture */}
-                {/* Traditional Side */}
-                <rect x="70" y="170" width="160" height="50" fill="#FFECB3" stroke="#FFD54F" strokeWidth="2"/>
-                <text x="150" y="200" textAnchor="middle" fill="#37474F" fontSize="12">Traditional Catalyst Layer</text>
-                <text x="150" y="160" textAnchor="middle" fill="#D32F2F" fontSize="14">High Ir Loading</text>
-                
-                {/* Interface Problem */}
-                <path d="M70 220 L230 220" stroke="#D32F2F" strokeWidth="3" strokeDasharray="5,5"/>
-                <text x="150" y="215" textAnchor="middle" fill="#D32F2F" fontSize="10">Interface Resistance</text>
-                
-                {/* New Architecture Side */}
-                <path d="M270 170 Q320 140 370 170 L370 220 L270 220 Z" fill="#A5D6A7" stroke="#4CAF50" strokeWidth="2"/>
-                <text x="320" y="200" textAnchor="middle" fill="#37474F" fontSize="12">Monolithic Ti-Ir Structure</text>
-                <text x="320" y="160" textAnchor="middle" fill="#2E7D32" fontSize="14">Ultra-Low Ir Loading</text>
-                
-                {/* Ir Nanoparticles */}
-                <circle cx="290" cy="180" r="3" fill="#E1F5FE" stroke="#0288D1" strokeWidth="1"/>
-                <circle cx="310" cy="175" r="3" fill="#E1F5FE" stroke="#0288D1" strokeWidth="1"/>
-                <circle cx="330" cy="180" r="3" fill="#E1F5FE" stroke="#0288D1" strokeWidth="1"/>
-                <circle cx="350" cy="185" r="3" fill="#E1F5FE" stroke="#0288D1" strokeWidth="1"/>
-                <circle cx="300" cy="190" r="3" fill="#E1F5FE" stroke="#0288D1" strokeWidth="1"/>
-                <circle cx="320" cy="195" r="3" fill="#E1F5FE" stroke="#0288D1" strokeWidth="1"/>
-                <circle cx="340" cy="190" r="3" fill="#E1F5FE" stroke="#0288D1" strokeWidth="1"/>
-                
-                {/* Divider */}
-                <line x1="250" y1="120" x2="250" y2="270" stroke="#78909C" strokeWidth="2" strokeDasharray="5,5"/>
-                
-                {/* Labels */}
-                <text x="150" y="120" textAnchor="middle" fill="#D32F2F" fontWeight="bold" fontSize="16">Conventional Approach</text>
-                <text x="320" y="120" textAnchor="middle" fill="#2E7D32" fontWeight="bold" fontSize="16">Our Approach</text>
-              </svg>
+              <img
+                src={imageMethod}
+                alt="Schematic of digitally architected CO₂RR catalyst layer methodology"
+                className="max-w-full max-h-[300px] object-contain"
+                style={{ display: 'block', margin: '0 auto' }}
+              />
             </div>
             
             <div className="bg-white rounded-lg shadow-md p-6">
@@ -175,7 +158,7 @@ const SolutionImpactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium">Seamless Electrical Pathway</p>
-                    <p className="text-sm text-gray-600">Eliminates contact resistance between catalyst layer and support</p>
+                    <p className="text-sm text-gray-600">Reduce contact resistance between gas diffusion layer and catalyst</p>
                   </div>
                 </div>
                 
@@ -185,7 +168,7 @@ const SolutionImpactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium">Maximized Catalyst Utilization</p>
-                    <p className="text-sm text-gray-600">Every Ir atom is accessible and electrochemically active</p>
+                    <p className="text-sm text-gray-600">Maximizes exposure of active sites at gas–electrolyte–solid interface</p>
                   </div>
                 </div>
                 
@@ -195,7 +178,7 @@ const SolutionImpactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium">Optimized Mass Transport</p>
-                    <p className="text-sm text-gray-600">Engineered porosity for efficient water/gas/product transport</p>
+                    <p className="text-sm text-gray-600">Porosity tailored for CO₂ and product transport with minimal flooding</p>
                   </div>
                 </div>
               </div>
