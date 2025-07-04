@@ -99,17 +99,17 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <SlideDeckWithTopNav
       slides={[
-        <TitleSlide key="title" />,
-        <ExecutiveSummarySection key="executive-summary" />,
-        <NoveltyInnovationSection key="novelty-innovation" />,
-        <MethodologyTimelineSection key="methodology-timeline" />,
-        <MotivationSection key="motivation" />,
-        <SolutionImpactSection key="solution" />,
-        <ObjectivesSection key="objectives" />,
-        <ResourcesCollaborationSection key="resources" />,
+        <TitleSlide key="title" />, 
+        <ExecutiveSummarySection key="executive-summary" />, 
+        <ResearcherBackgroundSection key="researcher-background" />,
+        <NoveltyInnovationSection key="novelty-innovation" />, 
+        <MethodologyTimelineSection key="methodology-timeline" />, 
+        <MotivationSection key="motivation" />, 
+        <SolutionImpactSection key="solution" />, 
+        <ObjectivesSection key="objectives" />, 
+        <ResourcesCollaborationSection key="resources" />, 
         <ExpectedOutcomesSection key="outcomes" />, 
-        <AlignmentMissionSection key="alignment" />, 
-        <ResearcherBackgroundSection key="researcher-background" />
+        <AlignmentMissionSection key="alignment" />
       ]}
     />
   </StrictMode>,
