@@ -10,6 +10,7 @@ import AlignmentMissionSection from "./components/AlignmentMissionSection";
 import ExecutiveSummarySection from "./components/ExecutiveSummarySection";
 import NoveltyInnovationSection from "./components/NoveltyInnovationSection";
 import MethodologyTimelineSection from "./components/MethodologyTimelineSection";
+import ResearcherBackgroundSection from "./components/ResearcherBackgroundSection";
 import SlideNavButtons from "./components/SlideNavButtons";
 import { useState, useRef } from "react";
 
@@ -106,8 +107,9 @@ createRoot(document.getElementById('root')!).render(
         <SolutionImpactSection key="solution" />,
         <ObjectivesSection key="objectives" />,
         <ResourcesCollaborationSection key="resources" />,
-        <ExpectedOutcomesSection key="outcomes" />,
-        <AlignmentMissionSection key="alignment" />,
+        <ExpectedOutcomesSection key="outcomes" />, 
+        <AlignmentMissionSection key="alignment" />, 
+        <ResearcherBackgroundSection key="researcher-background" />
       ]}
     />
   </StrictMode>,
